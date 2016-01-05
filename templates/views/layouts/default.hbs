@@ -21,9 +21,7 @@
 
 	</head>
 	<body>
-		<div id="vert-navbar">
-			<div class="container">
-				<div role="navigation" class="navbar navbar-default">
+		<div role="navigation" id="vert-navbar">
 					<div class="container-fluid">
 						<div class="navbar-header">
 							<button type="button" data-toggle="collapse" data-target=".navbar-collapse" class="navbar-toggle">
@@ -38,19 +36,17 @@
 									<li {{#ifeq ../section key}}class="active"{{else}}{{/ifeq}}>
 										<a href="{{ href }}">{{ label }}</a>
 									</li>
+								
 								{{/each}}
-							</ul>
-							<ul class="nav navbar-nav navbar-right">
-								{{#if user}}
-								<li><a href="/keystone/signout">Sign Out</a></li>
-								{{else}}
-								<li><a href="/keystone/signin">Sign In</a></li>
-								{{/if}}
+								
+									{{#if user}}
+									<li><a href="/keystone/signout">Sign Out</a></li>
+									{{else}}
+									<li><a href="/keystone/signin">Sign In</a></li>
+									{{/if}}
 							</ul>
 						</div>
 					</div>
-				</div>
-			</div>
 		</div>
 		<div id="body">
 			<!--
