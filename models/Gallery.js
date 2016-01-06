@@ -10,6 +10,7 @@ var Gallery = new keystone.List('Gallery', {
 	autokey: { from: 'name', path: 'key', unique: true }
 });
 
+//Mongoose Schema (Constructor for Model)
 Gallery.add({
 	name: { type: String, required: true },
 	publishedDate: { type: Date, default: Date.now },

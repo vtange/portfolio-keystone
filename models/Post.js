@@ -10,7 +10,7 @@ var Post = new keystone.List('Post', {
 	map: { name: 'title' },
 	autokey: { path: 'slug', from: 'title', unique: true }
 });
-
+//Mongoose Schema (Constructor for Model)
 Post.add({
 	title: { type: String, required: true },
 	state: { type: Types.Select, options: 'draft, published, archived', default: 'draft', index: true },

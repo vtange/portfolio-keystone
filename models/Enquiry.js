@@ -10,7 +10,7 @@ var Enquiry = new keystone.List('Enquiry', {
 	nocreate: true,
 	noedit: true
 });
-
+//Mongoose Schema (Constructor for Model)
 Enquiry.add({
 	name: { type: Types.Name, required: true },
 	email: { type: Types.Email, required: true },

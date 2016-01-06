@@ -7,7 +7,7 @@ var Types = keystone.Field.Types;
  */
 
 var Producer = new keystone.List('Producer');
-
+//Mongoose Schema (Constructor for Model)
 Producer.add({
 	name: { type: Types.Name, required: true, index: true },
 	email: { type: Types.Email, initial: true, required: true, index: true },
