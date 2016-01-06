@@ -5,7 +5,7 @@ exports = module.exports = function(req, res) {
 	var view = new keystone.View(req, res);
 	var locals = res.locals;
 	
-	// Set locals
+	// Set 'active' class to 'blog'
 	locals.section = 'blog';
 	locals.filters = {
 		post: req.params.post
@@ -41,7 +41,7 @@ exports = module.exports = function(req, res) {
 		
 	});
 	
-	// Render the view
+	// Render views/post.hbs
 	view.render('post');
 	
 };

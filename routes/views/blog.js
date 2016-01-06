@@ -6,7 +6,7 @@ exports = module.exports = function(req, res) {
 	var view = new keystone.View(req, res);
 	var locals = res.locals;
 	
-	// Init locals
+	// Set 'active' class to 'blog', declare filter(by category), posts, categories
 	locals.section = 'blog';
 	locals.filters = {
 		category: req.params.category
@@ -80,7 +80,7 @@ exports = module.exports = function(req, res) {
 		
 	});
 	
-	// Render the view
+	// Render views/blog.hbs
 	view.render('blog');
 	
 };

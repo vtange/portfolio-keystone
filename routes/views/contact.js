@@ -6,7 +6,7 @@ exports = module.exports = function(req, res) {
 	var view = new keystone.View(req, res);
 	var locals = res.locals;
 	
-	// Set locals
+	// Set 'active' class to 'contact', initiate form
 	locals.section = 'contact';
 	locals.enquiryTypes = Enquiry.fields.enquiryType.ops;
 	locals.formData = req.body || {};
@@ -33,7 +33,7 @@ exports = module.exports = function(req, res) {
 		});
 		
 	});
-	
+	// Render views/contact.hbs
 	view.render('contact');
 	
 };

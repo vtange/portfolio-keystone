@@ -26,7 +26,7 @@ var importRoutes = keystone.importer(__dirname);
 keystone.pre('routes', middleware.initLocals);
 keystone.pre('render', middleware.flashMessages);
 
-// Import Route Controllers
+// Import Route Controllers at routes/views
 var routes = {
 	views: importRoutes('./views')
 };

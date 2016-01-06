@@ -7,9 +7,10 @@ exports = module.exports = function(req, res) {
 	
 	// locals.section is used to set the currently selected
 	// item in the header navigation.
+	// Set 'active' class to 'home'
 	locals.section = 'home';
 	
-	// Render the view
+	// Render views/index.hbs
 	view.render('index');
 	
 };
