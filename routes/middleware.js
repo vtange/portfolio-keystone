@@ -30,7 +30,7 @@ exports.initLocals = function(req, res, next) {
 		{ label: 'Contact',		key: 'contact',		href: '/contact' }
 	];
 	
-	locals.user = req.user;
+	locals.user = req.user;	//locals keeps track of user and key, to know what the page's state is
 	
 	next();
 	
