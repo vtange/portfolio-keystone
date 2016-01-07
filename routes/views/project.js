@@ -10,7 +10,7 @@ exports = module.exports = function(req, res) {
 	locals.section = 'works';
 	
 	// Load all Gallery's into 'galleries', ordered by by sortOrder
-	view.query('galleries', keystone.list('Gallery').model.find().sort('sortOrder'));
+	view.query('projects', keystone.list('Project').model.find().sort('sortOrder'));
 	
 	// Render views/works.hbs
 	view.render('works');

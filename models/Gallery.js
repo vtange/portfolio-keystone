@@ -6,16 +6,16 @@ var Types = keystone.Field.Types;
  * =============
  */
 
-var Gallery = new keystone.List('Gallery', {
+var Project = new keystone.List('Project', {
 	autokey: { from: 'name', path: 'key', unique: true }
 });
 
 //Mongoose Schema (Constructor for Model)
-Gallery.add({
+Project.add({
 	name: { type: String, required: true },
 	publishedDate: { type: Date, default: Date.now },
 	heroImage: { type: Types.CloudinaryImage },
 	images: { type: Types.CloudinaryImages }
 });
 
-Gallery.register();
+Project.register();
