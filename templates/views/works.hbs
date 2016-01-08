@@ -4,8 +4,7 @@
 		{{#each projects}}
 		<!--<h2>{{name}}</h2>-->
 				{{#if heroImage}}
-				<div class="col-sm-4 col-md-4 gallery-image">
-					<img src="{{cloudinaryUrl heroImage width='680' height='680'}}">
+				<div class="col-sm-4 col-md-4 gallery-image" style="background-image:url({{cloudinaryUrl heroImage}})">
 				</div>
 				{{/if}}
 		{{/each}}
