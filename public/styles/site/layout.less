@@ -17,15 +17,23 @@
 }
 #vert-navbar a:hover, #vert-navbar a:focus {
 	outline:0px;
-	text-decoration: none;
+	text-decoration: underline;
 	/*overwrite Bootstrap's .nav > li > a*/
 	background-color:transparent;
-	box-shadow: rgb(255,255,255) 0px 0px 1px inset;
 }
-#vert-navbar .active {
+/* ACTIVE GLOW */
+#vert-navbar .active, .list-group-item.active, .pagination > .active > a {
 	background-color:rgba(255,170,170,0.5);
 	box-shadow: 0px 1px 1px 1px rgba(255, 255, 255, 0.1), rgb(255,170,170) 0px 0px 9px inset;
+	border-color: rgb(255,170,170);
 }
+#vert-navbar .active:hover, .list-group-item.active:hover, .pagination > .active > a:hover {
+	background-color:rgba(255,170,170,0.5);
+	box-shadow: 0 0 3px rgba(255, 255, 255, 0.1), rgb(255,170,170) 0px 0px 20px inset;
+	border-color: rgb(255,170,170);
+	cursor: pointer;
+}
+/* ACTIVE GLOW */
 #body{
 	/*shift body right width of bar */
 	margin-left: 18em;
@@ -47,45 +55,15 @@ body {
 }
 .post {
 	border-radius: 5px;
-	background-color: rgba(0,0,0,0.5);
-	box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
 	padding: 40px;
 	color:white;
 }
-/*--pagination--*/
-.pagination > .disabled > a {
+/*--dark background transparent--*/
+.post, .list-group-item, .pagination > .disabled > a {
 	background-color: rgba(0,0,0,0.5);
 	border-color: #474747;
 }
-.pagination > .active > a {
-	/*same as #vert-navbar .active*/
-	background-color:rgba(255,170,170,0.5);
-	box-shadow: 0px 1px 1px 1px rgba(255, 255, 255, 0.1), rgb(255,170,170) 0px 0px 9px inset;
-	border-color: rgb(255,170,170);
-}
-.pagination > .active > a:hover{
-	background-color:rgba(255,170,170,0.5);
-	box-shadow: 0 0 3px rgba(255, 255, 255, 0.1), rgb(255,170,170) 0px 0px 20px inset;
-	border-color: rgb(255,170,170);
-	cursor: pointer;
-}
-/*--pagination--*/
-/*--category--*/
-.list-group-item{
-	background-color: rgba(0,0,0,0.5);
-	border-color: #474747;
-}
-.list-group-item.active{
-	background-color:rgba(255,170,170,0.5);
-	box-shadow: 0px 1px 1px 1px rgba(255, 255, 255, 0.1), rgb(255,170,170) 0px 0px 9px inset;
-	border-color: rgb(255,170,170);
-}
-.list-group-item.active:hover{
-	background-color:rgba(255,170,170,0.5);
-	box-shadow: 0 0 3px rgba(255, 255, 255, 0.1), rgb(255,170,170) 0px 0px 20px inset;
-	border-color: rgb(255,170,170);
-}
-/*--category--*/
+/*--dark background transparent--*/
 /* BLOG STYLING */
 /* WORK STYLING */
 
