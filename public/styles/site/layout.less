@@ -12,14 +12,21 @@
 		width: 18em; /* width of bar */
 		z-index: 10000;
 }
-#vert-navbar a {
+.navbar-brand, .navbar-brand:hover, .navbar-brand:focus{
+	outline:0px;
+	text-decoration: none;
 	color:white;
+	font-size: 3.5rem;
+}
+#vert-navbar li > a {
+	color:white;
+	font-size: 1.5rem;
 	border-right: 1px solid transparent;
 }
 #vert-navbar li {
 	width:100%;
 }
-#vert-navbar a:hover, #vert-navbar a:focus {
+#vert-navbar li > a:hover, #vert-navbar li > a:focus {
 	outline:0px;
 	text-decoration: none;
 	border-right: 1px solid white;
@@ -45,7 +52,7 @@
 }
 body {
 	background-color:rgb(20,18,52);
-	font-family: "Muli"
+	font-family: "Muli";
 }
 /* BASE ^^^ */
 /* BLOG STYLING */
@@ -60,9 +67,15 @@ body {
 	color:lightgoldenrodyellow;
 }
 .post {
-	border-radius: 5px;
+	border-radius: 7px;
 	padding: 40px;
 	color:white;
+	font-size: 1.5rem;
+	line-height: 2.25rem;
+}
+.text-muted{
+	font-size: 1.25rem;
+	text-transform: uppercase;
 }
 /*--dark background transparent--*/
 .post, .list-group-item, .pagination > .disabled > a {
