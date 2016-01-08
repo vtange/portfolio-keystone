@@ -1,29 +1,13 @@
-<div class="container">
-	<h1>My Works</h1>
-</div>
-<div class="container">
+<div class="gallery-container">
 	<!-- if projects -->
 	{{#if projects}}
 		{{#each projects}}
-		<h2>{{name}}
-			<div class="pull-right text-muted">19th May 2014</div>
-		</h2>
-		<div class="row gallery-images">
+		<!--<h2>{{name}}</h2>-->
 				{{#if heroImage}}
 				<div class="col-sm-4 col-md-4 gallery-image">
-					<img src="{{cloudinaryUrl heroImage width='680' height='680'}}" class="img-rounded">
+					<img src="{{cloudinaryUrl heroImage width='680' height='680'}}">
 				</div>
 				{{/if}}
-				<div class="col-sm-8 col-md-8">
-					<div class="row">
-						{{#each images}}
-						<div class="col-xs-4 col-sm-4 col-md-3 gallery-image">
-							<img src="{{cloudinaryUrl width='300' height='300'}}" class="img-rounded">
-						</div>
-						{{/each}}
-					</div>
-				</div>
-		</div>
 		{{/each}}
 	{{else}}
 	<!-- else -->

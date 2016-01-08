@@ -86,12 +86,17 @@ body {
 /* BLOG STYLING */
 /* WORK STYLING */
 
-.gallery-image img {
-    display: block;
+.gallery-image.col-sm-4.col-md-4{
+	padding:0; /* make raw grid */
+}
+.gallery-image.col-sm-4.col-md-4 img{
+    display: inline-block;
     max-width: 100%;
     height: auto;
 }
-
+.gallery-container {
+	overflow-x: hidden;
+}
 /* WORK STYLING */
 /* CONTACT STYLING */
 .contact-container {
