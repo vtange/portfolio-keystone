@@ -1,11 +1,9 @@
-<div class="container">
-	<h1>Contact Us</h1>
-</div>
-<div class="container">
+<div class="contact-container">
 	<div class="row">
-		<div class="col-sm-8 col-md-6">
+		<div class="col-sm-8 col-md-9">
+			<h1>Contact Me</h1>
 			{{#if enquirySubmitted}}
-			<h3>Thanks for getting in touch.</h3>
+			<h3>Thank you for your message.</h3>
 			{{else}}
 			<form method="post">
 				<input type="hidden" name="action" value="contact">
@@ -22,7 +20,7 @@
 					<input type="text" name="phone" placeholder="(optional)" class="form-control" value="{{formData.phone}}">
 				</div>
 				<div class="form-group {{#if validationErrors.enquiryType}}has-error{{/if}}">
-					<label>What are you contacting us about?</label>
+					<label>What are you interested in?</label>
 					<select name="enquiryType" class="form-control">
 						<option value="">(select one)</option>
 						{{#each enquiryTypes}}
