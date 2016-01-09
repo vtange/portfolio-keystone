@@ -112,3 +112,46 @@ body {
 }
 
 /* CONTACT STYLING */
+/* GLOW GRID */
+#grid{
+	position:absolute;		/* req'd for horiz center */
+	right:50%;				/* req'd for horiz center */
+	text-align:center;		/* req'd for horiz center */
+}
+#whole{
+	display:inline-block;	/* req'd for horiz center */
+	margin-right:-100%;		/* req'd for horiz center */
+	margin-top:-0.5%;
+}
+.cell-row{
+	white-space: nowrap;
+}
+.grid-element {
+	display: inline-block;
+}
+@media screen and (max-width: 2048px) {
+	.grid-element {
+		border: 1px solid #657;
+	}
+}
+@media screen and (max-width: 1024px) {
+	.grid-element {
+		border: 1px solid #546;
+	}
+}
+@media screen and (max-width: 768px) {
+	.grid-element {
+		border: 1px solid #435;
+	}
+}
+@media screen and (max-width: 512px) {
+	.grid-element {
+		border: 1px solid #3e2e5e;
+	}
+}
+.glow-element {
+	margin:-1px -1px;
+	position: absolute;
+  	opacity: 0;
+}
+/* GLOW GRID */
