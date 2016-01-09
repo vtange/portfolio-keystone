@@ -14,8 +14,9 @@ var Project = new keystone.List('Project', {
 Project.add({
 	name: { type: String, required: true },
 	publishedDate: { type: Date, default: Date.now },
-	heroImage: { type: Types.CloudinaryImage },
-	images: { type: Types.CloudinaryImages }
+	mainImage: { type: Types.CloudinaryImage },
+	desc: { type: Types.Html, wysiwyg: true, height: 150 },
+	link: { type: Types.Url }
 });
 
 Project.register();
