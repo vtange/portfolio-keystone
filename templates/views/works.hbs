@@ -4,8 +4,13 @@
 		{{#each projects}}
 		<!--<h2>{{name}}</h2>-->
 				{{#if mainImage}}
-				<a href="{{link}}"><div class="col-sm-4 col-md-4 gallery-image" style="background-image:url({{cloudinaryUrl mainImage}})">
-				</div></a>
+					{{#if link}}
+						<div class="col-sm-4 col-md-5 mock-scrn"><a href="{{link}}"><div class=" gallery-image" style="background-image:url({{cloudinaryUrl mainImage}})">
+				</div></a></div>
+					{{else}}
+				<div class="col-sm-4 col-md-5 mock-scrn"><div class=" gallery-image" style="background-image:url({{cloudinaryUrl mainImage}})">
+				</div></div>
+					{{/if}}
 				{{/if}}
 		{{/each}}
 	{{else}}

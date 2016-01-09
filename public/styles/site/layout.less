@@ -56,7 +56,7 @@ body {
 	font-family: "Muli";
 }
 /*--dark background transparent--*/
-#vert-navbar, .post, .list-group-item, .pagination > .disabled > a, .contact-container > .row {
+#vert-navbar, .post, .list-group-item, .pagination > .disabled > a, .mock-scrn, .contact-container > .row {
 	background-color: rgba(20,20,20,0.55);
 	border:1px solid #474747;
 }
@@ -86,7 +86,12 @@ body {
 }
 /* BLOG STYLING */
 /* WORK STYLING */
-
+.mock-scrn{
+	height:30%;
+	margin:30px;
+	padding:30px;
+	border-radius: 14px;
+}
 .gallery-image.col-sm-4.col-md-4{
 	padding:0; /* make raw grid */
 }
@@ -95,8 +100,9 @@ body {
     background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
-    max-width: 100%;
-    height: 33%;
+    height: 100%;
+    width: 100%;
+	box-shadow: rgba(0,0,0,0.55) 0px 0px 20px;
 }
 .gallery-container {
 	overflow-x: hidden;
@@ -112,10 +118,10 @@ body {
 	margin-top:50px;
 	width:50vw;
 	margin:auto;
+	margin-left:10%;
 	border-radius: 7px;
 	z-index: 10;
 }
-
 /* CONTACT STYLING */
 /* GLOW GRID */
 #grid-container {
