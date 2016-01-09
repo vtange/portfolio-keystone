@@ -28,9 +28,11 @@
 #vert-navbar li > a:hover, #vert-navbar li > a:focus {
 	outline:0px;
 	text-decoration: none;
-	border-right: 1px solid white;
 	/*overwrite Bootstrap's .nav > li > a*/
 	background-color:transparent;
+}
+#vert-navbar li > a:hover {
+	border-right: 1px solid white;
 }
 /* ACTIVE GLOW */
 #vert-navbar .active, .list-group-item.active, .pagination > .active > a {
@@ -53,6 +55,12 @@ body {
 	background-color:#282334;
 	font-family: "Muli";
 }
+/*--dark background transparent--*/
+#vert-navbar, .post, .list-group-item, .pagination > .disabled > a, .contact-container > .row {
+	background-color: rgba(20,20,20,0.55);
+	border:1px solid #474747;
+}
+/*--dark background transparent--*/
 /* BASE ^^^ */
 /* BLOG STYLING */
 .blog-container, .contact-container {
@@ -76,12 +84,6 @@ body {
 	font-size: 1.25rem;
 	text-transform: uppercase;
 }
-/*--dark background transparent--*/
-#vert-navbar, .post, .list-group-item, .pagination > .disabled > a, .contact-container > .row {
-	background-color: rgba(20,20,20,0.55);
-	border:1px solid #474747;
-}
-/*--dark background transparent--*/
 /* BLOG STYLING */
 /* WORK STYLING */
 
