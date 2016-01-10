@@ -16,7 +16,8 @@ Project.add({
 	publishedDate: { type: Date, default: Date.now },
 	mainImage: { type: Types.CloudinaryImage },
 	desc: { type: Types.Html, wysiwyg: true, height: 150 },
-	link: { type: Types.Url }
+	link: { type: Types.Url },
+	tags: { type: Types.Relationship, ref: 'ProjectTag', many: true }
 });
 
 Project.register();
