@@ -5,11 +5,18 @@
 		<!--<h2>{{name}}</h2>-->
 				{{#if mainImage}}
 					{{#if link}}
-						<div class="col-sm-4 col-md-5 mock-scrn"><a href="{{link}}"><div class=" gallery-image" style="background-image:url({{cloudinaryUrl mainImage}})">
-				</div></a></div>
+						<div class="col-sm-4 col-md-5 mock-scrn"><a href="{{link}}"><div class="gallery-image" style="background-image:url({{cloudinaryUrl mainImage}})">
+																	<!--desc here--><span class="project-desc">{{desc}}</span>
+																</div></a>
+							<!--title here-->{{name}}
+						</div>
 					{{else}}
-				<div class="col-sm-4 col-md-5 mock-scrn"><div class=" gallery-image" style="background-image:url({{cloudinaryUrl mainImage}})">
-				</div></div>
+				<div class="col-sm-4 col-md-5 mock-scrn">
+					<div class="gallery-image" style="background-image:url({{cloudinaryUrl mainImage}})">
+							<!--desc here--><span class="project-desc">{{desc}}</span>
+					</div>
+					<!--title here-->{{name}}
+				</div>
 					{{/if}}
 				{{/if}}
 		{{/each}}
