@@ -6,12 +6,12 @@
 				{{# each data.posts.results}}
 				
 					<div data-ks-editable="{{#if ../user}}{{adminEditableUrl ../../user _id}}{{/if}}" class="post">
-						<h2><a href="{{postUrl slug}}">{{{title}}}</a></h2>
+						<h2><a class="blogpost-title" href="{{postUrl slug}}">{{{title}}}</a></h2>
 						<p class="lead text-muted">{{{categoryList categories prefix="Posted in "}}}
 								{{#if author.name.first}}{{author.name.first}}{{/if}}{{#if author.name.last}}<span> </span>{{author.name.last}}{{/if}}
 						</p>
 						<p>{{{content.extended}}}</p>
-						<p class="read-more"><a href="{{postUrl slug}}">Read more...</a></p>
+						<p><a class="read-more" href="{{postUrl slug}}">Read more...</a></p>
 					</div>
 				
 				{{/each}}

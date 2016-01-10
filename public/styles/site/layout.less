@@ -1,3 +1,7 @@
+a:hover, a:focus {
+	outline:0px;
+	text-decoration: none;
+}
 #vert-navbar{
 		color:white;
 		padding: 2.5em 2.5em 0.5em 2.5em ;
@@ -45,8 +49,6 @@
 	width:100%;
 }
 #vert-navbar li > a:hover, #vert-navbar li > a:focus {
-	outline:0px;
-	text-decoration: none;
 	/*overwrite Bootstrap's .nav > li > a*/
 	background-color:transparent;
 }
@@ -89,9 +91,6 @@ body {
 	padding-left: 15px;
 	padding-right: 15px;
 }
-.blog-container a {
-	color:lightgoldenrodyellow;
-}
 .post, .contact-container > .row {
 	border-radius: 7px;
 	padding: 40px;
@@ -102,6 +101,13 @@ body {
 .text-muted{
 	font-size: 1.25rem;
 	text-transform: uppercase;
+}
+.blogpost-title, .blogpost-title:hover, .blogpost-title:focus {
+	color:white;
+	margin-bottom: 40px;
+}
+.read-more, .go-back {
+	color:limegreen;
 }
 /* BLOG STYLING */
 /* WORK STYLING */
