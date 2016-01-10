@@ -10,9 +10,11 @@
 						<p class="lead text-muted">
 								{{#if author.name.first}}{{author.name.first}}{{/if}}{{#if author.name.last}}<span> </span>{{author.name.last}}{{/if}}
 						</p>
-						<p>{{{content.extended}}}</p>
-						<p>{{{categoryList categories}}}</p>
+						<p>{{{content.full}}}</p>
+						<p class="categories">{{{categoryList categories}}}</p>
 						<p><a class="read-more" href="{{postUrl slug}}">Read more...</a></p>
+						<hr>
+						<p class="time-ago">{{publishedDate}}</p>
 					</div>
 				
 				{{/each}}

@@ -8,8 +8,10 @@
 						{{#if data.post.author.name.first}}{{data.post.author.name.first}}{{/if}}{{#if data.post.author.name.last}}<span> </span>{{data.post.author.name.last}}{{/if}}
 					</p>
 					{{{data.post.content.extended}}}
-					<p>{{{categoryList data.post.categories}}}</p>
+					<p class="categories">{{{categoryList data.post.categories}}}</p>
 					<p><a class="go-back" href="/blog">&larr; back to the blog</a></p>
+					<hr>
+					<p class="time-ago">{{data.post.publishedDate}}</p>
 				</div>
 			</article>
 		</div>
