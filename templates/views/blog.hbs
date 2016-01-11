@@ -11,7 +11,7 @@
 								{{#if author.name.first}}{{author.name.first}}{{/if}}{{#if author.name.last}}<span> </span>{{author.name.last}}{{/if}}
 						</p>
 						<p>{{{content.full}}}</p>
-						<p class="categories">{{{categoryList categories}}}</p>
+						<p class="categories">{{{categoryList categories prior="/blog/"}}}</p>
 						<p><a class="read-more" href="{{postUrl slug}}">Read more...</a></p>
 						<hr>
 						<p class="text-muted"><span data-livestamp="{{publishedDate}}"></span></p>

@@ -99,6 +99,7 @@ module.exports = function() {
 			separator = _.isString(options.hash.separator) ? options.hash.separator : ' ',
 			prefix = _.isString(options.hash.prefix) ? options.hash.prefix : '',
 			suffix = _.isString(options.hash.suffix) ? options.hash.suffix : '',
+			prior = _.isString(options.hash.prior) ? options.hash.prior : '',
 			output = '';
 		
 		function createTagList(tags) {
@@ -107,7 +108,7 @@ module.exports = function() {
 			if (autolink) {
 				return _.map(tags, function(tag) {
 					return linkTemplate({
-						url: ('/blog/' + tag.key),
+						url: (prior + tag.key),
 						text: _.escape(tag.name)
 					});
 				}).join(separator);
