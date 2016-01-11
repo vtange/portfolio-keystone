@@ -1,3 +1,10 @@
+		<div id="tag-filterer">
+				<a href="/works" {{#if data.tag.key}}class="false tag-item"{{else}}class="active tag-item"{{/if}}>All Projects</a>
+				{{#each data.tags }}
+				<a href="{{tagUrl key}}" {{#ifeq ../data.tag.key key}}class="active tag-item"{{else}}{{/ifeq}} class="false tag-item">{{name}}</a>
+				{{/each}}
+		</div>
+
 <div class="gallery-container">
 	<!-- if projects -->
 	{{#if data.projects}}
@@ -20,12 +27,8 @@
 					{{/if}}
 				{{/if}}
 		{{/each}}
-	{{#each data.tags}}
-	<p>{{id}}</p>
-	<p>{{key}}</p>
-	{{/each}}
 	{{else}}
 	<!-- else -->
-	<h3 class="text-muted">There are no image galleries yet.</h3>
+	<h3 class="text-muted">Couldn't find any projects.</h3>
 	{{/if}}
 </div>

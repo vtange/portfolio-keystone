@@ -231,6 +231,11 @@ module.exports = function() {
 		return ('/blog/' + categorySlug);
 	};
 	
+	// create the category url for a project-tag page
+	_helpers.tagUrl = function(tagSlug, options) {
+		return ('/works/' + tagSlug);
+	};
+	
 	// ### Pagination Helpers
 	// These are helpers used in rendering a pagination system for content
 	// Mostly generalized and with a small adjust to `_helper.pageUrl` could be universal for content types
