@@ -24,9 +24,9 @@
 		<div class="col-sm-4 col-md-2">
 			<h4 style="color:white">Filter by:</h4>
 			<div style="margin-top: 40px;" class="list-group">
-				<a href="/blog" {{#if category}}class="false list-group-item"{{else}}class="active list-group-item"{{/if}}>All Categories</a>
+				<a href="/blog" {{#if data.category.key}}class="false list-group-item"{{else}}class="active list-group-item"{{/if}}>All Categories</a>
 				{{#each data.categories }}
-				<a href="{{categoryUrl key}}" {{#ifeq ../category key}}class="active list-group-item"{{else}}{{/ifeq}} class="false list-group-item">{{name}}</a>
+				<a href="{{categoryUrl key}}" {{#ifeq ../data.category.key key}}class="active list-group-item"{{else}}{{/ifeq}} class="false list-group-item">{{name}}</a>
 				{{/each}}
 			</div>
 		</div>
