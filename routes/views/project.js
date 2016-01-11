@@ -43,7 +43,7 @@ exports = module.exports = function(req, res) {
 		
 	});
 	
-	// Narrow down locals.data.tags with req.params.tag via locals.filters.tag
+	// Generate locals.data.tag with req.params.tag via locals.filters.tag, if it exists
 	view.on('init', function(next) {
 		
 		if (req.params.tag) {
@@ -57,7 +57,7 @@ exports = module.exports = function(req, res) {
 		
 	});
 	
-	// Load the posts
+	// Build database query and execute to generate locals.data
 	view.on('init', function(next) {
 		// declare query object "q", define it below, execute it
 		var q;
@@ -68,7 +68,6 @@ exports = module.exports = function(req, res) {
 			q = keystone.list('Project').model.find().populate('tags');
 		}
 		q.exec(function(err, results) {
-			console.log(results);
 			locals.data.projects = results;
 			next(err);
 		});
