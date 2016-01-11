@@ -48,7 +48,7 @@ exports = module.exports = function(req, res) {
 		
 		if (req.params.tag) {
 			keystone.list('ProjectTag').model.findOne({ key: locals.filters.tag }).exec(function(err, result) {
-				locals.data.tags = result;
+				locals.data.tag = result;
 				next(err);
 			});
 		} else {
@@ -61,8 +61,8 @@ exports = module.exports = function(req, res) {
 	view.on('init', function(next) {
 		// declare query object "q", define it below, execute it
 		var q;
-		if (req.params.tag) {
-			q = keystone.list('Project').model.where('tags').in([locals.data.tags[0].id]);
+		if (locals.data.tag) {
+			q = keystone.list('Project').model.where('tags').in([locals.data.tag.id]);
 		}
 		else{
 			q = keystone.list('Project').model.find();
