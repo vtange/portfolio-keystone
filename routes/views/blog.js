@@ -11,6 +11,7 @@ exports = module.exports = function(req, res) {
 	locals.filters = {
 		category: req.params.category
 	};
+	locals.category = locals.filters.category;
 	locals.data = {
 		posts: [],
 		categories: []

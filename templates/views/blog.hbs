@@ -3,7 +3,7 @@
 		<div class="col-sm-8 col-md-9">
 			<div class="blog">
 				
-				{{# each data.posts.results}}
+				{{#each data.posts.results}}
 				
 					<div data-ks-editable="{{#if ../user}}{{adminEditableUrl ../../user _id}}{{/if}}" class="post">
 						<h2><a class="blogpost-title" href="{{postUrl slug}}">{{{title}}}</a></h2>
@@ -24,9 +24,9 @@
 		<div class="col-sm-4 col-md-2">
 			<h4 style="color:white">Filter by:</h4>
 			<div style="margin-top: 40px;" class="list-group">
-				<a href="/blog" class="active list-group-item">All Categories</a>
-				{{# each data.categories }}
-				<a href="{{categoryUrl key}}" class="false list-group-item">{{name}}</a>
+				<a href="/blog" {{#if category}}class="false list-group-item"{{else}}class="active list-group-item"{{/if}}>All Categories</a>
+				{{#each data.categories }}
+				<a href="{{categoryUrl key}}" {{#ifeq ../category key}}class="active list-group-item"{{else}}{{/ifeq}} class="false list-group-item">{{name}}</a>
 				{{/each}}
 			</div>
 		</div>

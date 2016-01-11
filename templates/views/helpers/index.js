@@ -96,7 +96,7 @@ module.exports = function() {
 	
 	_helpers.categoryList = function(categories, options) {
 		var autolink = _.isString(options.hash.autolink) && options.hash.autolink === "false" ? false : true,
-			separator = _.isString(options.hash.separator) ? options.hash.separator : ', ',
+			separator = _.isString(options.hash.separator) ? options.hash.separator : ' ',
 			prefix = _.isString(options.hash.prefix) ? options.hash.prefix : '',
 			suffix = _.isString(options.hash.suffix) ? options.hash.suffix : '',
 			output = '';
