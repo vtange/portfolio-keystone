@@ -62,7 +62,7 @@ exports = module.exports = function(req, res) {
 		// declare query object "q", define it below, execute it
 		var q;
 		if (locals.data.tag) {
-			q = keystone.list('Project').model.where('tags').in([locals.data.tag.id]);
+			q = keystone.list('Project').model.where('tags').in([locals.data.tag.id]).populate('tags');
 		}
 		else{
 			q = keystone.list('Project').model.find().populate('tags');
