@@ -2,6 +2,9 @@ a:hover, a:focus {
 	outline:0px;
 	text-decoration: none;
 }
+#vert-navbar button{
+	border:3px solid white;
+}
 #vert-navbar{
 		color:white;
 		padding: 2.5em 2.5em 0.5em 2.5em ;
@@ -17,9 +20,20 @@ a:hover, a:focus {
 		z-index: 10000;
 		overflow-y: hidden;
 }
-#vert-navbar #avatar{
-	max-width:150px;
-	border-radius: 7px;
+@media screen and (min-width: 768px){
+	#vert-navbar #avatar{
+		width:150px;
+		height:150px;
+		background-image: url("https://en.gravatar.com/userimage/81829932/8691582a2e6a7799db4c14a969fbe603.png?size=200");
+		background-size: cover;
+		background-repeat: no-repeat;
+		border-radius: 7px;
+	}
+}
+@media screen and (max-width: 768px){
+	#vert-navbar #avatar{
+		display: none;
+	}
 }
 /* shadow under all images */
 #vert-navbar #avatar, .gallery-image {
@@ -31,10 +45,15 @@ a:hover, a:focus {
 	text-decoration: none;
 	color:white;
 	font-size: 3.5rem;
+	height:125px;
+}
+#vert-navbar h1 {
 	border-bottom: 1px solid white;
 }
 #vert-navbar h3 {
+	margin-top:10px;
 	text-align: center;
+	white-space: nowrap;
 }
 #vert-navbar .navbar-nav{
 	margin: 7.5px -15px;
