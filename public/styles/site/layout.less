@@ -77,21 +77,21 @@ body {
 	font-family: "Muli";
 }
 /*--dark background transparent--*/
-#vert-navbar, .post, .list-group-item, .tag-item, .pagination > .disabled > a, .mock-scrn, .contact-container > .row {
+#vert-navbar, .post, .intro-box, .list-group-item, .tag-item, .pagination > .disabled > a, .mock-scrn, .contact-container > .row {
 	background-color: rgba(20,20,20,0.55);
 	border:1px solid #474747;
 }
 /*--dark background transparent--*/
 /* BASE ^^^ */
 /* BLOG STYLING */
-.blog-container, .contact-container {
+.blog-container, .contact-container, .intro-container {
 	margin-right: auto;
 	margin-left: auto;
 	padding-top: 40px;
 	padding-left: 15px;
 	padding-right: 15px;
 }
-.post, .contact-container > .row {
+.post, .contact-container > .row, .intro-box {
 	border-radius: 7px;
 	padding: 40px;
 	color:white;
@@ -216,6 +216,21 @@ body {
 	z-index: 10;
 }
 /* CONTACT STYLING */
+/* INTRO STYLING */
+.intro-box{
+	width:50%;
+	min-width: 400px;
+	margin: auto;
+	font-size: 2rem;
+}
+.circle-avatar{
+	background-image: url(https://en.gravatar.com/userimage/81829932/d490adf7a8a55757c864639717e50283.jpg?size=200);
+	height:200px;
+	width:200px;
+	margin: auto;
+	border-radius: 50%;
+}
+/* INTRO STYLING */
 /* GLOW GRID */
 #grid-container {
 	width:100%;
