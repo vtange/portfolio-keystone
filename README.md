@@ -1,4 +1,4 @@
-# Portfolio3
+# portfolio-keystone
 Node-based Keystone.JS portfolio site
 
 # Deploying to Openshift - Steps
